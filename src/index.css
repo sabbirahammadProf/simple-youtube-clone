@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: 'Readex Pro', sans-serif;
+    background-color: #e5e7eb;
+}
+.sidebar-head{
+    width: 20%;
+    background: white;
+}
+.sidebar-item{
+    @apply py-2 pl-6 text-base font-thin flex items-center cursor-pointer;
+}
+.sidebar-item:hover {
+    @apply bg-gray-100;
+}
+.sidebar-item i{
+    @apply mr-8 text-base w-3;
+}
+.sidebar{
+    position: fixed;
+    height: 100vh;
+    width: 20%;
+    overflow: hidden;
+    margin-top: 65px;
+}
+.sidebar::-webkit-scrollbar{
+    width: 8px;
+    cursor: pointer;
+}
+.sidebar::-webkit-scrollbar-thumb{
+    width: 8px;
+    background: gray;
+    border-radius: 6px;
+}
+.sidebar:hover {
+    overflow-y: scroll;
+}
+.tag{
+    @apply bg-gray-100 border border-gray-300 rounded-full py-1 px-4 mx-1 my-2 cursor-pointer;
+}
+.tagbar{
+    overflow: auto;
+    white-space: nowrap;
+    position: fixed;
+    width: 80%;
+}
+.tagbar::-webkit-scrollbar{
+    height: 7px;
+    cursor: pointer;
+}
+.tagbar::-webkit-scrollbar-thumb{
+    background-color: rgb(194, 194, 194);
+}
+.videos-head{
+    width: 79%;
+}
+.videos{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.channel-logo{
+    height: 38px;
+    width: 38px;
 }
